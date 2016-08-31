@@ -6,11 +6,11 @@ import java.util.Scanner;
 public class FindElementByCycle {
     public static void main(String[] args) {
 
-        System.out.println("Введите длину последовательности (рекомендую 10)");
+        System.out.println("Введите длину последовательности (например, 10)");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        System.out.println("Введите значение эпсилон (рекомендую 0,02)");
+        System.out.println("Введите значение эпсилон (например, 0,02)");
         Scanner sce = new Scanner(System.in);
         double e = sce.nextDouble();
 
