@@ -8,11 +8,11 @@ import static java.lang.Math.*;
 public class Function {
     public static void main(String[] args) {
 
-        System.out.println("Введите 'a'(double) - начальное значение отрезка");
+        System.out.println("Введите 'a'(double) - начальное значение отрезка ab");
         Scanner sca = new Scanner(System.in);
         double a = sca.nextDouble();
 
-        System.out.println("Введите 'b'(double) - конечное значение отрезка");
+        System.out.println("Введите 'b'(double) - конечное значение отрезка ab");
         Scanner scb = new Scanner(System.in);
         double b = scb.nextDouble();
 
