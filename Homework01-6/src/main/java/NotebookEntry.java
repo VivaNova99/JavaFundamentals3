@@ -12,17 +12,18 @@ public class NotebookEntry {
     private int findingASlot(){
         for (int i = 0; i < 100; i++){
             if (a[i] == null) {
+
                 n = i;
                 break;
             }
 
-            else {
-                n = 101;
-                System.out.println("Нет свободного места для новых записей");
-            }
-
         }
+
+        if (n == 99)
+            System.out.println("Нет свободного места для новых записей");
+
         return n;
+
     }
 
     void makingAChoice () {
@@ -43,7 +44,7 @@ public class NotebookEntry {
                 choice = scchoice.nextInt();
 
                 switch (choice) {
-                    case 1: addEntry(n);
+                    case 1: addEntry();
                         break;
                     case 2: deleteEntry();
                         break;
@@ -77,7 +78,7 @@ public class NotebookEntry {
 
                     switch (choice) {
                         case 1:
-                            addEntry(n);
+                            addEntry();
                             break;
                         case 2:
                             deleteEntry();
@@ -105,7 +106,7 @@ public class NotebookEntry {
     private void viewAllEntries() {
 
         for (int i = 0; i < 100; i++){
-            if (a[i] == null) {
+            if (a[i] != null) {
                 System.out.println("Запись " + i +" - " + a[i]);
             }
         }
@@ -132,7 +133,10 @@ public class NotebookEntry {
         a[entrynumber] = null;
     }
 
-    private void addEntry (int place){
+    private void addEntry (){
+
+        this.findingASlot();
+        int place = n;
 
         System.out.println("Введите текст");
         Scanner scnewentry = new Scanner(System.in);
