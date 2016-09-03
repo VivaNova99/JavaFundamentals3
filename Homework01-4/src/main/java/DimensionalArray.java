@@ -28,6 +28,6 @@ public class DimensionalArray {
 
         }
 
-        System.out.println("наибольший элемент в последовательности = " + max);
+        System.out.println("Наибольший элемент в последовательности = " + max);
     }
 }
