@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 /**
- * Created by veraivanova on 03.09.16.
+ * Класс Notebook у экземпляра класса NotebookEntry вызывает методы, позволяющие реализовать весь функционал
+ * по работе с записями.
+ * В классе Notebook расположена точка входа в программу.
  */
 public class Notebook {
 

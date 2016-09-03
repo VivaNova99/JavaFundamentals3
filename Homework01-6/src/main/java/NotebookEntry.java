@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 /**
- * Created by veraivanova on 03.09.16.
+ * Класс NotebookEntry реализует функционал по предложению выбора варианта работы с записями,
+ * а так же реализует саму работу с записями.
  */
 public class NotebookEntry {
 
@@ -9,6 +10,10 @@ public class NotebookEntry {
 
     int n = 0;
 
+    /**
+     * Поиск первого по порядку пустого элемента в массиве для хранения новой записи.
+     * @return n - возвращает индекс пустого элемента.
+     */
     private int findingASlot(){
         for (int i = 0; i < 100; i++){
             if (a[i] == null) {
@@ -26,6 +31,10 @@ public class NotebookEntry {
 
     }
 
+    /**
+     * Метод makingAChoice() предлагает сделать выбор и вызывает методы, работающие с записями, в соответствии со сделанным выбором
+     * либо завершает работу программы.
+     */
     void makingAChoice () {
 
         for (int work = 0; work < 100; work++){
@@ -103,6 +112,9 @@ public class NotebookEntry {
 
     }
 
+    /**
+     * Метод viewAllEntries() выводит на консоль все непустые элементы массива записей.
+     */
     private void viewAllEntries() {
 
         for (int i = 0; i < 100; i++){
@@ -113,6 +125,9 @@ public class NotebookEntry {
 
     }
 
+    /**
+     * Метод editEntry() заменяет выбранную запись в массиве записей на новую.
+     */
     private void editEntry() {
 
         System.out.println("Введите номер записи, которую Вы хотите отредактировать");
@@ -125,6 +140,9 @@ public class NotebookEntry {
 
     }
 
+    /**
+     * Метод deleteEntry() присваивает значение null выбранному элементу массива
+     */
     private void deleteEntry() {
 
         System.out.println("Введите номер записи, которую Вы хотите удалить");
@@ -133,6 +151,9 @@ public class NotebookEntry {
         a[entrynumber] = null;
     }
 
+    /**
+     * Метод addEntry() записывает введенную строку в первый по порядку пустой элемент массива.
+     */
     private void addEntry (){
 
         this.findingASlot();
