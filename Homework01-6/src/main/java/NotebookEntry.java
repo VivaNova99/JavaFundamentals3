@@ -6,28 +6,28 @@ import java.util.Scanner;
  */
 public class NotebookEntry {
 
-    String[] a = new String[100];
+    private String[] a = new String[100];
 
-    int n = 0;
+    private int freePlace = 0;
 
     /**
      * Поиск первого по порядку пустого элемента в массиве для хранения новой записи.
-     * @return n - возвращает индекс пустого элемента.
+     * @return freePlace - возвращает индекс пустого элемента.
      */
-    private int findingASlot(){
+    private int getFreeSlot(){
         for (int i = 0; i < 100; i++){
             if (a[i] == null) {
 
-                n = i;
+                freePlace = i;
                 break;
             }
 
         }
 
-        if (n == 99)
+        if (freePlace == 99)
             System.out.println("Нет свободного места для новых записей");
 
-        return n;
+        return freePlace;
 
     }
 
@@ -156,13 +156,10 @@ public class NotebookEntry {
      */
     private void addEntry (){
 
-        this.findingASlot();
-        int place = n;
-
         System.out.println("Введите текст");
         Scanner scnewentry = new Scanner(System.in);
         String newentry = scnewentry.nextLine();
-        a[place] = newentry;
+        a[getFreeSlot()] = newentry;
     }
 
 

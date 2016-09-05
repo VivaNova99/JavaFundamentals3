@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -19,6 +20,8 @@ public class DimensionalArray {
 //            System.out.println("a["+(i)+"] = "+a[i]);
 
         }
+//        Arrays.fill(a, 0, 2*n, 1);
+
 
         for (int i = 1; i <= n; i++) {
 
