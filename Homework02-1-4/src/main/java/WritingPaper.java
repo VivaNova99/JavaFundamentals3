@@ -3,6 +3,4 @@
  */
 public abstract class WritingPaper extends Stationery {
 
-    int
-
 }

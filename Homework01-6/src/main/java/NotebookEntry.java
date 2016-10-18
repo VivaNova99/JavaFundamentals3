@@ -43,7 +43,7 @@ public class NotebookEntry {
             int mainchoice = -1;
 
             if (work == 0) {
-                System.out.println("Введите цифру, чтобы сделать выбор\n " +
+                System.out.println("Введите цифру, чтобы сделать выбор \n " +
                         "1 - чтобы добавить запись \n " +
                         "2 - чтобы удалить запись \n " +
                         "3 - чтобы редактировать запись \n " +
