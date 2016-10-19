@@ -25,6 +25,10 @@ public class EmployeeSet {
 //            new PaperForPrinter(20, "PaperForPrinter")
 //    };
 
+    public Stationery[] getStationeriesForOlga(){
+        return stationeriesForOlga;
+    }
+
     Stationery[] stationeriesForOlgaByName = stationeriesForOlga;
 
     public void stationeriesForOlgaSortingByName(){
