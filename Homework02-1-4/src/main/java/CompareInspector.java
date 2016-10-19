@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -9,59 +10,48 @@ public class CompareInspector {
 
     public static void main(String[] args) {
 
-        System.out.println("Введите '1', чтобы сортировать по цене; /n " +
-                "Введите '2', чтобы сортировать по названию; /n " +
+        System.out.println("Введите '1', чтобы сортировать по названию; \n"  +
+                "Введите '2', чтобы сортировать по цене; \n" +
                 "Введите '3', чтобы сортировать сперва по названию, затем по цене");
 
-        int choice = 0;
+        int choice;
         Scanner MyChoice = new Scanner(System.in);
         choice = MyChoice.nextInt();
+
+        EmployeeSet employeeSetSortedByName = new EmployeeSet();
+        EmployeeSet employeeSetSortedByPrice = new EmployeeSet();
+        EmployeeSet employeeSetSortedByNameAndPrice = new EmployeeSet();
+
 
         switch (choice) {
 
             case 1:
-                Comparator<Stationery> compByName = new EmployeeSetComparatorByName();
 
-                TreeSet<Stationery> stationeryForPetr1 = new TreeSet(compByName);
-                stationeryForPetr1.add(new Pen(10, "BluePen"));
-                stationeryForPetr1.add(new Pencil(8, "SimplePencil"));
-                stationeryForPetr1.add(new Eraser(8, "Eraser"));
-                stationeryForPetr1.add(new Notebook(11, "SmallNotebook"));
-                stationeryForPetr1.add(new PaperForPrinter(20, "PaperForPrinter"));
+                employeeSetSortedByName.getStationeriesForOlgaByName();
 
-                for (Stationery stationeries : stationeryForPetr1) {
+                for (Stationery stationeries : employeeSetSortedByName.getStationeriesForOlgaByName()) {
 
                     System.out.println(stationeries.getPrice() + " " + stationeries.getName());
                 }
+
                 break;
 
             case 2:
-                Comparator<Stationery> compByPrice = new EmployeeSetComparatorByPrice();
 
-                TreeSet<Stationery> stationeryForPetr2 = new TreeSet(compByPrice);
-                stationeryForPetr2.add(new Pen(10, "BluePen"));
-                stationeryForPetr2.add(new Pencil(8, "SimplePencil"));
-                stationeryForPetr2.add(new Eraser(8, "Eraser"));
-                stationeryForPetr2.add(new Notebook(11, "SmallNotebook"));
-                stationeryForPetr2.add(new PaperForPrinter(20, "PaperForPrinter"));
+                employeeSetSortedByPrice.getStationeriesForOlgaByPrice();
 
-                for (Stationery stationeries : stationeryForPetr2) {
+                for (Stationery stationeries : employeeSetSortedByPrice.getStationeriesForOlgaByPrice()) {
 
                     System.out.println(stationeries.getPrice() + " " + stationeries.getName());
                 }
+
                 break;
 
             case 3:
-                Comparator<Stationery> compByNameAndPrice = new EmployeeSetComparatorByName().thenComparing(new EmployeeSetComparatorByPrice());
 
-                TreeSet<Stationery> stationeryForPetr3 = new TreeSet(compByNameAndPrice);
-                stationeryForPetr3.add(new Pen(10, "BluePen"));
-                stationeryForPetr3.add(new Pencil(8, "SimplePencil"));
-                stationeryForPetr3.add(new Eraser(8, "Eraser"));
-                stationeryForPetr3.add(new Notebook(11, "SmallNotebook"));
-                stationeryForPetr3.add(new PaperForPrinter(20, "PaperForPrinter"));
+                employeeSetSortedByNameAndPrice.getStationeriesForOlgaByNameAndPrice();
 
-                for (Stationery stationeries : stationeryForPetr3) {
+                for (Stationery stationeries : employeeSetSortedByNameAndPrice.getStationeriesForOlgaByNameAndPrice()) {
 
                     System.out.println(stationeries.getPrice() + " " + stationeries.getName());
                 }
