@@ -1,7 +1,6 @@
-import java.util.Arrays;
-import java.util.Comparator;
+
 import java.util.Scanner;
-import java.util.TreeSet;
+
 
 /**
  * Created by veraivanova on 18.10.16.

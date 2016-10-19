@@ -5,10 +5,6 @@ import java.util.*;
  */
 public class EmployeeSet {
 
-//    public Stationery[] EmployeeSet() {
-//        return stationeriesForOlga;
-//    }
-
     Stationery[] stationeriesForOlga = {
             new Pen(7, "SimpleBlackPen"),
             new Pencil(8, "RedPencil"),
